@@ -1,0 +1,32 @@
+<div class="container">
+
+  {{#if hasContent}}
+
+    <div class="card-container d-flex justify-content-center flex-wrap">
+
+      {{#each newsArr}}
+
+        <div class="card mt-3">
+          <img src="{{this.urlToImage}}" class="card-img-top" alt="article image">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{{this.url}}">{{this.title}}</a></h5>
+            <p class="card-text">
+              {{this.description}}
+              <br>
+            <div class="font-italic">
+              {{this.publishedAt}}
+            </div>
+            </p>
+            <!-- <a href="{{this.url}}" class="btn btn-primary">Read more</a> -->
+          </div>
+        </div>
+
+      {{/each}}
+
+    </div>
+
+  {{else}}
+    <h1>No results :(</h1>
+  {{/if}}
+
+</div>

@@ -1,0 +1,43 @@
+body {
+  /* background-color: black !important;
+  color: white !important; */
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio]+img {
+  cursor: pointer;
+}
+
+[type=radio]:checked+img {
+  outline: 2px solid rgb(43, 169, 203);
+}
+
+.flags {
+  display: block;
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.article-summary {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.card-title {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.card {
+  max-width: 18rem;
+}

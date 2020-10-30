@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <title>World in a Nutshell</title>
+</head>
+
+<body>
+  <div class="container bg-light">
+    <h1>News</h1>
+    <form action="/search" method="GET">
+
+      <div class="form-group">
+        <label for="news_search"></label>
+        <input type="text" name="news_search" placeholder="Search news" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <select class="btn btn-secondary dropdown-toggle" name="category">
+          <option value="">All categories</option>
+          <option value="business">Business</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="health">Health</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="technology">Technology</option>
+        </select>
+      </div>
+
+      <div class="form-group flags">
+        <div class="d-flex justify-content-center flex-wrap">
+          <label>
+            <input type="radio" name="country" value="sg" class="flag-selector" value="small">
+            <img src="/media/sg.png" alt="">
+          </label>
+
+          <label>
+            <input type="radio" name="country" value="us" class="flag-selector">
+            <img src="/media/us.png" alt="">
+          </label>
+
+          <label>
+            <input type="radio" name="country" value="uk" class="flag-selector">
+            <img src="/media/uk.png" alt="">
+          </label>
+
+          <label>
+            <input type="radio" name="country" value="fr" class="flag-selector">
+            <img src="/media/fr.png" alt="">
+          </label>
+
+          <label>
+            <input type="radio" name="country" value="jp" class="flag-selector">
+            <img src="/media/jp.png" alt="">
+          </label>
+
+          <label>
+            <input type="radio" name="country" value="cn" class="flag-selector">
+            <img src="/media/cn.png" alt="">
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Search</button>
+
+    </form>
+
+
+    {{{body}}}
+  </div>
+</body>
+
+</html>
