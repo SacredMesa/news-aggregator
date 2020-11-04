@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 const withQuery = require('with-query').default;
 
 // Configure environment
-const PORT = parseInt(process.argv[2] || process.env.APP_PORT) || 3000
+const PORT = process.env.PORT;
 const API_KEY = process.env.API_KEY || "";
 
 const ENDPOINT = 'https://newsapi.org/v2/top-headlines';
