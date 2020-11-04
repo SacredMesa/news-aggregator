@@ -11,6 +11,10 @@ const API_KEY = process.env.API_KEY || "";
 
 const ENDPOINT = 'https://newsapi.org/v2/top-headlines';
 
+const headers = {
+  'X-Api-Key': API_KEY
+}
+
 // Instances
 const app = express();
 
@@ -23,7 +27,7 @@ app.engine('hbs', handlebars({
     defaultLayout: 'default.hbs'
 }));
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views'); //Check to see if can delete
+// app.set('views', __dirname + '/views'); //Check to see if can delete
 
 // handlebars.registerHelper('splitTime', function (a) {
 // return a.split('T').join(' ').slice(0, -1);
@@ -34,8 +38,6 @@ app.get('/', (req, res) => {
     res.type('text/html');
     res.render('index');
 })
-
-
 
 app.get('/search', async (req, res) => {
     res.status(200);
@@ -50,12 +52,11 @@ app.get('/search', async (req, res) => {
             country: country,
             q: search,
             category: category,
-
-            apiKey: API_KEY
+            // apiKey: API_KEY
         }
     );
 
-    let result = await fetch(url);
+    let result = await fetch(url, {headers});
 
     try {
         const rawNews = await result.json();
